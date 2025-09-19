@@ -11,25 +11,37 @@
       font-family: 'Patrick Hand', cursive;
       background: linear-gradient(to bottom right, #e0c3fc, #8ec5fc);
       color: #2c2c2c;
-      text-align: center;
     }
 
-    header {
-      padding: 2em;
-      font-size: 2.5em;
+    nav {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 1em;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 1em;
+      text-decoration: none;
+      color: #4b0082;
       font-weight: bold;
     }
 
     section {
       max-width: 800px;
-      margin: 2em auto;
+      margin: 3em auto;
       padding: 1em;
-      font-size: 1.4em;
-      line-height: 1.6em;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #4b0082;
     }
 
     img {
-      max-width: 80%;
+      max-width: 90%;
       height: auto;
       margin: 1.5em 0;
       border-radius: 12px;
@@ -37,32 +49,66 @@
     }
 
     iframe {
-      width: 80%;
+      width: 90%;
       height: 400px;
       margin: 2em 0;
       border: none;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
+
+    footer {
+      text-align: center;
+      padding: 2em;
+      font-size: 1.2em;
+      color: #4b0082;
+    }
   </style>
 </head>
 <body>
-  <header>
-    Tinsley Coronado Gillen
-  </header>
 
-  <section>
-    <p>
-      After high school, I want to <strong>study engineering</strong>. I’m curious about how systems work, and I enjoy problem solving and design challenges.
-      From <strong>Unit 1</strong>, I’ve learned how <em>computing innovations</em> can solve real-world problems and how computers represent data using <em>binary</em>.
-      From <strong>Unit 2</strong>, I understand how the <em>internet</em> is a complex system based on <em>protocols</em> like IP and TCP, and how <em>data packets</em> are routed through networks.
-    </p>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#goals">Goals</a>
+    <a href="#internet">Internet</a>
+    <a href="#digitaldivide">Digital Divide</a>
+    <a href="#thanks">Thanks</a>
+  </nav>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Computer-engineering-diagram.svg/1920px-Computer-engineering-diagram.svg.png" alt="Engineering Diagram" />
-
-    <iframe src="https://www.youtube.com/embed/7_LPdttKXPc" title="How the Internet Works - YouTube Video" allowfullscreen></iframe>
-
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Internet_map_1024.jpg" alt="Artistic Representation of the Internet" />
+  <section id="home">
+    <h1>Tinsley Coronado Gillen</h1>
   </section>
+
+  <section id="goals">
+    <h2>My Goals</h2>
+    <p>
+      After high school, I want to <strong>study engineering</strong> because I'm passionate about building systems and solving real-world problems.  
+      In <strong>Unit 1</strong>, I learned how <em>computing innovations</em> like assistive technologies and machine learning are used to make a difference.  
+      In <strong>Unit 2</strong>, I studied how the <em>internet</em> works, including how <em>packets</em> travel through networks using <em>protocols</em> like IP and TCP.
+    </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Computer-engineering-diagram.svg/1920px-Computer-engineering-diagram.svg.png" alt="Engineering Diagram" />
+  </section>
+
+  <section id="internet">
+    <h2>How the Internet Works</h2>
+    <iframe src="https://www.youtube.com/embed/7_LPdttKXPc" title="How the Internet Works - YouTube Video" allowfullscreen></iframe>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Internet_map_1024.jpg" alt="Artistic Internet Map" />
+  </section>
+
+  <section id="digitaldivide">
+    <h2>The Digital Divide</h2>
+    <p>
+      The <strong>Digital Divide</strong> refers to the gap between those who have access to computing resources and those who do not.  
+      It affects education, economic opportunity, and communication across the world.  
+      People in rural or low-income areas often face limited internet access, creating long-term disadvantages.  
+      Addressing the divide means improving digital equity and creating solutions that reach underserved communities.
+    </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Digital_divide_world_map_SVG.svg/1280px-Digital_divide_world_map_SVG.svg.png" alt="Digital Divide Map" />
+  </section>
+
+  <footer id="thanks">
+    <p>Thanks for visiting!</p>
+  </footer>
+
 </body>
 </html>
