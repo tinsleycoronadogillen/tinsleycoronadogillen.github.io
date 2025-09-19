@@ -2,113 +2,141 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tinsley Coronado Gillen</title>
-  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       font-family: 'Patrick Hand', cursive;
-      background: linear-gradient(to bottom right, #e0c3fc, #8ec5fc);
-      color: #2c2c2c;
+      background: linear-gradient(135deg, #6a0dad, #b19cd9);
+      color: white;
+      line-height: 1.6;
     }
-
+    header {
+      padding: 2rem;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px #330066;
+    }
     nav {
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 1em;
+      background: rgba(255 255 255 / 0.15);
+      padding: 0.5rem;
       text-align: center;
       position: sticky;
       top: 0;
-      z-index: 1000;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      z-index: 10;
     }
-
     nav a {
-      margin: 0 1em;
+      color: white;
+      margin: 0 1rem;
+      font-weight: 600;
       text-decoration: none;
-      color: #4b0082;
-      font-weight: bold;
+      font-size: 1.1rem;
     }
-
+    nav a:hover {
+      text-decoration: underline;
+    }
     section {
       max-width: 800px;
-      margin: 3em auto;
-      padding: 1em;
-      text-align: center;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      background: rgba(255 255 255 / 0.1);
+      border-radius: 12px;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.25);
     }
-
-    h1, h2 {
-      color: #4b0082;
+    h2 {
+      color: #e0d7f5;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 2px #330066;
     }
-
+    p {
+      font-size: 1.25rem;
+    }
     img {
       max-width: 90%;
       height: auto;
-      margin: 1.5em 0;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      display: block;
+      margin: 1.5rem auto;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
     }
-
     iframe {
+      display: block;
+      margin: 2rem auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
       width: 90%;
       height: 400px;
-      margin: 2em 0;
       border: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-
     footer {
       text-align: center;
-      padding: 2em;
-      font-size: 1.2em;
-      color: #4b0082;
+      padding: 2rem 1rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #dcd6f7;
+      text-shadow: 1px 1px 2px #330066;
+    }
+    a.google-link {
+      color: #c8bfe7;
+      font-weight: 700;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
   <nav>
     <a href="#home">Home</a>
     <a href="#goals">Goals</a>
     <a href="#internet">Internet</a>
     <a href="#digitaldivide">Digital Divide</a>
-    <a href="#thanks">Thanks</a>
+    <a href="#link">Google Doc</a>
   </nav>
 
-  <section id="home">
-    <h1>Tinsley Coronado Gillen</h1>
-  </section>
+  <header id="home">
+    Tinsley Coronado Gillen
+  </header>
 
   <section id="goals">
-    <h2>My Goals</h2>
+    <h2>My Future Goal</h2>
     <p>
-      After high school, I want to <strong>study engineering</strong> because I'm passionate about building systems and solving real-world problems.  
-      In <strong>Unit 1</strong>, I learned how <em>computing innovations</em> like assistive technologies and machine learning are used to make a difference.  
-      In <strong>Unit 2</strong>, I studied how the <em>internet</em> works, including how <em>packets</em> travel through networks using <em>protocols</em> like IP and TCP.
+      After high school, I want to study <strong>engineering</strong> because I’m fascinated by how <em>computing innovations</em> solve real-world problems.  
+      I am eager to learn more about how data travels through a <em>network</em> in small <em>data packets</em> following strict <em>protocols</em>.  
+      Understanding these concepts will help me build technologies that reduce the <em>digital divide</em> and improve connectivity worldwide.
     </p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Computer-engineering-diagram.svg/1920px-Computer-engineering-diagram.svg.png" alt="Engineering Diagram" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Robotics-assembly-in-manufacturing-2020.jpg" alt="Real-world Engineering Robotics Assembly" />
   </section>
 
   <section id="internet">
     <h2>How the Internet Works</h2>
-    <iframe src="https://www.youtube.com/embed/7_LPdttKXPc" title="How the Internet Works - YouTube Video" allowfullscreen></iframe>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Internet_map_1024.jpg" alt="Artistic Internet Map" />
+    <iframe src="https://www.youtube.com/embed/7_LPdttKXPc" title="How the Internet Works" allowfullscreen></iframe>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Internet_map_1024.png" alt="Conceptual Internet Network Map" />
   </section>
 
   <section id="digitaldivide">
     <h2>The Digital Divide</h2>
     <p>
-      The <strong>Digital Divide</strong> refers to the gap between those who have access to computing resources and those who do not.  
-      It affects education, economic opportunity, and communication across the world.  
-      People in rural or low-income areas often face limited internet access, creating long-term disadvantages.  
-      Addressing the divide means improving digital equity and creating solutions that reach underserved communities.
+      The <strong>digital divide</strong> is the gap between those who have access to modern technology and those who do not.  
+      It limits educational and economic opportunities for many communities.  
+      Closing this gap is essential for creating an equitable future where everyone can benefit from technology.
     </p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Digital_divide_world_map_SVG.svg/1280px-Digital_divide_world_map_SVG.svg.png" alt="Digital Divide Map" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Digital_divide_world_map_SVG.svg/1280px-Digital_divide_world_map_SVG.svg.png" alt="Digital Divide World Map" />
   </section>
 
-  <footer id="thanks">
-    <p>Thanks for visiting!</p>
-  </footer>
+  <section id="link" style="text-align:center; margin: 3rem auto; max-width: 600px;">
+    <h2>Course Materials</h2>
+    <p>
+      Check out the full Unit 1 &amp; Unit 2 materials here:  
+      <a class="google-link" href="https://docs.google.com/document/d/1gQvrlgVvCvX1XDamRuxumn4lPk6OULJOmmmKeW0jsHs/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Unit 1 & Unit 2 Google Document</a>
+    </p>
+  </section>
 
+  <footer>
+    Thanks for visiting!
+  </footer>
 </body>
 </html>
