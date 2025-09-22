@@ -142,56 +142,116 @@
   </footer>
 
   <script>
-    const vocabQuestions = [
-      {
-        question: "What is a bit?",
-        choices: [
-          "A large file used on the internet.",
-          "A binary digit, either 0 or 1.",
-          "A group of 8 bytes.",
-          "A data error."
-        ],
-        correct: 1
-      },
-      {
-        question: "What is a byte?",
-        choices: [
-          "A keyboard symbol.",
-          "A digital virus.",
-          "A sequence of 8 bits.",
-          "A network cable."
-        ],
-        correct: 2
-      },
-      {
-        question: "What is roundoff?",
-        choices: [
-          "A type of hardware failure.",
-          "An error from limited bits to store numbers.",
-          "When signals are delayed.",
-          "A way to clean your data."
-        ],
-        correct: 1
-      },
-      {
-        question: "What is analog data?",
-        choices: [
-          "Data in 0s and 1s.",
-          "Digital text messages.",
-          "Data that changes smoothly over time.",
-          "A software update."
-        ],
-        correct: 2
-      },
-      {
-        question: "What does lossless mean?",
-        choices: [
-          "Compression that keeps all data.",
-          "Data that's gone forever.",
-          "Streaming with buffering.",
-          "Image loading delays."
-        ],
-        correct: 0
+  const vocabQuestions = [
+    {
+      question: "What is a bit?",
+      choices: [
+        "A large file used on the internet.",
+        "A binary digit, either 0 or 1.",
+        "A group of 8 bytes.",
+        "A data error."
+      ],
+      correct: 1
+    },
+    {
+      question: "What is a byte?",
+      choices: [
+        "A keyboard symbol.",
+        "A digital virus.",
+        "A sequence of 8 bits.",
+        "A network cable."
+      ],
+      correct: 2
+    },
+    {
+      question: "What is roundoff?",
+      choices: [
+        "A type of hardware failure.",
+        "An error from limited bits to store numbers.",
+        "When signals are delayed.",
+        "A way to clean your data."
+      ],
+      correct: 1
+    },
+    {
+      question: "What is analog data?",
+      choices: [
+        "Data in 0s and 1s.",
+        "Digital text messages.",
+        "Data that changes smoothly over time.",
+        "A software update."
+      ],
+      correct: 2
+    },
+    {
+      question: "What does lossless mean?",
+      choices: [
+        "Compression that keeps all data.",
+        "Data that's gone forever.",
+        "Streaming with buffering.",
+        "Image loading delays."
+      ],
+      correct: 0
+    }
+  ];
+
+  let currentQuestion = 0;
+
+  const questionEl = document.getElementById('question');
+  const choicesEl = document.getElementById('choices');
+  const feedbackEl = document.getElementById('feedback');
+  const nextBtn = document.getElementById('next-btn');
+
+  function loadQuestion() {
+    const q = vocabQuestions[currentQuestion];
+    questionEl.textContent = q.question;
+    choicesEl.innerHTML = ''; // clear old choices
+    feedbackEl.textContent = ''; // clear feedback
+
+    q.choices.forEach((choice, index) => {
+      const btn = document.createElement('button');
+      btn.textContent = choice;
+      btn.style.margin = '0.5rem';
+      btn.style.padding = '0.5rem 1rem';
+      btn.style.border = 'none';
+      btn.style.borderRadius = '8px';
+      btn.style.cursor = 'pointer';
+      btn.style.fontSize = '1rem';
+      btn.style.backgroundColor = '#ffffff22';
+      btn.style.color = 'white';
+      btn.onmouseover = () => btn.style.backgroundColor = '#ffffff44';
+      btn.onmouseout = () => btn.style.backgroundColor = '#ffffff22';
+
+      btn.addEventListener('click', () => {
+        if (index === q.correct) {
+          feedbackEl.textContent = '✅ Correct!';
+          feedbackEl.style.color = '#90ee90';
+        } else {
+          feedbackEl.textContent = `❌ Incorrect. The correct answer was "${q.choices[q.correct]}".`;
+          feedbackEl.style.color = '#ffcccb';
+        }
+        Array.from(choicesEl.children).forEach(b => b.disabled = true); // disable buttons after answering
+      });
+
+      choicesEl.appendChild(btn);
+    });
+  }
+
+  nextBtn.addEventListener('click', () => {
+    currentQuestion++;
+    if (currentQuestion < vocabQuestions.length) {
+      loadQuestion();
+    } else {
+      questionEl.textContent = '🎉 You finished the quiz!';
+      choicesEl.innerHTML = '';
+      feedbackEl.textContent = '';
+      nextBtn.disabled = true;
+    }
+  });
+
+  // Load the first question when the page loads
+  window.addEventListener('DOMContentLoaded', loadQuestion);
+</script>
   
   <section id="link" style="text-align:center; margin: 3rem auto; max-width: 600px;">
     <h2>Course Materials</h2>
